@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Atualização das Normas Internas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { color: #006644; }
+    h2 { color: #005555; margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; font-size: 12px; }
+    th { background-color: #e6f5f1; text-align: left; }
+    .header { margin-bottom: 30px; }
+    .footer { margin-top: 40px; font-size: 10px; color: #777; }
+    .section { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Relatório de Atualização das Normas Internas</h1>
+    <p><strong>Data de geração:</strong> {{dataAtual}}</p>
+    <p><strong>Definição:</strong> Norma dentro do prazo é aquela cuja data de vigência é igual ou posterior à sua data de publicação.</p>
+    <p><strong>Fórmula:</strong> (Normas dentro do prazo / Normas vigentes) × 100</p>
+  </div>
+
+  <div class="section">
+    <h2>Resumo</h2>
+    <ul>
+      <li>Total de normas vigentes: {{total}}</li>
+      <li>Normas dentro do prazo: {{dentroPrazo}}</li>
+      <li>Percentual atualizado: {{percentual}}%</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Lista de Normas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Numeração</th>
+          <th>Ano</th>
+          <th>Instrumento</th>
+          <th>Descrição</th>
+          <th>Publicação</th>
+          <th>Vigência</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{tabela}}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Relatório gerado automaticamente pela Diretoria Jurídica da DPE-MT.
+  </div>
+</body>
+</html>
